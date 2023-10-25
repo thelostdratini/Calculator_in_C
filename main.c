@@ -25,11 +25,11 @@ int main()
   printf("Entre com um segundo valor do tipo int na base 10:");
   scanf("%i", &j);
 
-  char k;
+  char op;
   printf("escolha algum simbolo entre +,-,*,/");
-  scanf(" %c", &k);
+  scanf(" %c", &op);
 
-  switch (k){
+  switch (op){
     case '+':
     printf("%d\n", dog(i,j));
     break;

@@ -1,47 +1,53 @@
 #include <stdio.h>
+#include <math.h>
 
-int dog(int x, int y){  
+double dog(double x, double y){  
   return x + y;
 }
 
-int cat(int a, int b){
+double cat(double a, double b){
   return a - b;
 }
 
-int max(int c, int d){
+double max(double c, double d){
   return c * d;
 }
 
-int cooper(int e, int f){
+double cooper(double e, double f){
   return e / f;
 }
-int main()
-{
-  int i;
-  printf("Entre com um valor do tipo int na base 10:");
-  scanf("%i", &i);
 
-  int j;
+int main(){
+
+  double i;
+  printf("Entre com um valor do tipo int na base 10:");
+  scanf("%lf", &i);
+
+  double j;
   printf("Entre com um segundo valor do tipo int na base 10:");
-  scanf("%i", &j);
+  scanf("%lf", &j);
 
   char op;
-  printf("escolha algum simbolo entre +,-,*,/");
+  printf("escolha algum simbolo entre +,-,*,/,^");
   scanf(" %c", &op);
 
   switch (op){
     case '+':
-    printf("%d\n", dog(i,j));
+    printf("%lf\n", dog(i,j));
     break;
     case '-':
-    printf("%d\n", cat(i,j));
+    printf("%lf\n", cat(i,j));
     break;
     case '*':
-    printf("%d\n", max(i,j));
+    printf("%lf\n", max(i,j));
     break;
     case '/':
-    printf("%d\n", cooper(i,j));
+    printf("%lf\n", cooper(i,j));
+    break;
+    case '^':
+    printf("%lf\n", pow(i,j));
     break;
   }
+
   return 0;
 }
